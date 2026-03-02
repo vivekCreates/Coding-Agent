@@ -10,3 +10,18 @@ def read_file(path: str) -> str:
     except Exception as e:
         return str(e)
 
+
+@tool
+def write_file(data: str) -> str:
+    """
+    Create or overwrite a file.
+    Input must be: path|||content
+    """
+    try:
+        path, content = data.split("|||")
+        with open(path.strip(), "w") as f:
+            f.write(content.strip())
+        return f"File {path} written successfully."
+    except Exception as e:
+        return str(e)
+
