@@ -37,4 +37,12 @@ def delete_file(path: str) -> str:
         return str(e)
 
 
+@tool
+def list_files(path: str = ".") -> str:
+    """List files in directory."""
+    try:
+        return "\n".join(os.listdir(path))
+    except Exception as e:
+        return str(e)
+
 
