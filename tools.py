@@ -25,3 +25,16 @@ def write_file(data: str) -> str:
     except Exception as e:
         return str(e)
 
+
+
+@tool
+def delete_file(path: str) -> str:
+    """Delete a file."""
+    try:
+        os.remove(path)
+        return f"{path} deleted."
+    except Exception as e:
+        return str(e)
+
+
+
