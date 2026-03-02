@@ -46,3 +46,4 @@ def list_files(path: str = ".") -> str:
         return str(e)
 
 
+tools = [read_file,write_file,delete_file,list_files]
