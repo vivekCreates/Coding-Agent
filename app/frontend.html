@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 2rem;}
+        .todo {display: flex; align-items: center; margin-bottom: 0.5rem;}
+        .todo.completed span {text-decoration: line-through; color: #777;}
+        .todo button {margin-left: 0.5rem;}
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div id="todo-list"></div>
+    <h2>Add Todo</h2>
+    <form id="add-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="description" placeholder="Description" />
+        <button type="submit">Add</button>
+    </form>
+    <script src="frontend.js"></script>
+</body>
+</html>
